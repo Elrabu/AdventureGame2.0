@@ -25,7 +25,7 @@ public class SwordHit : MonoBehaviour
     private bool facingRight = true;
 // public GameObject player;
     private bool rightfacing;
-    //new comment
+
     private void Start()
     {
         if (SceneManager.GetActiveScene().name != "Level2")
