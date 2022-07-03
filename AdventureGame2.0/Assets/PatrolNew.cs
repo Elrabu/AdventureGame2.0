@@ -12,8 +12,7 @@ public class PatrolNew : MonoBehaviour
 
     public HealthBar HealthBar;
     public GameObject hitExplosion;
-
-    
+ 
 
     
     public float walkingSpeed;
