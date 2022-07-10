@@ -25,7 +25,7 @@ public class SwordHit : MonoBehaviour
     private bool facingRight = true;
 // public GameObject player;
     private bool rightfacing;
-    //new comment
+
     private void Start()
     {
         if (SceneManager.GetActiveScene().name != "Level2")
@@ -40,7 +40,6 @@ public class SwordHit : MonoBehaviour
     }
     void Update()
     {
-        
         if (ScoreManager.instance.getpoints() >= 20 && level1 == false)
         {
             level1 = true;
@@ -53,11 +52,7 @@ public class SwordHit : MonoBehaviour
                 DamagePopup damagePopup = damagePopupTransform.GetComponent<DamagePopup>();
                 damagePopup.Popup("Sword Upgraded");
                 swordlevel = 1;
-            }
-            
-            
-            
-            
+            }          
         } else if(ScoreManager.instance.getpoints() >= 60 && level2 == false)
         {
             level2 = true;
@@ -94,8 +89,7 @@ public class SwordHit : MonoBehaviour
 
         moveInput = Input.GetAxis("Horizontal");
         Vector3 temp = transform.rotation.eulerAngles;
-
-        
+       
         if(hitcooldown <= 0)
         {
             temp.z = -45.0f;
@@ -112,8 +106,7 @@ public class SwordHit : MonoBehaviour
         else
         {
             hitcooldown -= Time.deltaTime;
-        }
-      
+        }   
         if (timeBtwAttack <= 0)
         {
             timeBtwAttack = startTimeBtwAttack;
@@ -122,7 +115,6 @@ public class SwordHit : MonoBehaviour
                 if (Input.GetKey(KeyCode.Space))
                 {
                     temp.z = 270.0f;
-
                     if (rightfacing == true)
                     {
                         transform.rotation = Quaternion.Euler(temp);
